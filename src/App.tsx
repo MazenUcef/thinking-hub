@@ -1,12 +1,12 @@
-import React from 'react'
 import ImpactStats from './components/ImpactStats'
+import NewsletterSignup from './components/NewsletterSignup'
 
 const App = () => {
   return (
-    // <h1 className="text-3xl font-bold underline">
-    //   Hello world!
-    // </h1>
-    <ImpactStats />
+    <>
+      <ImpactStats />
+      <NewsletterSignup />
+    </>
   )
 }
 
