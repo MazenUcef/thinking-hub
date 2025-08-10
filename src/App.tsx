@@ -1,11 +1,12 @@
 import React from 'react'
+import Approutes from './routes/Approutes'
 
 const App = () => {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    return (
+        <div className='min-h-screen flex flex-col'>
+            <Approutes />
+        </div>
+    )
 }
 
 export default App
