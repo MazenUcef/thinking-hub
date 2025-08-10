@@ -1,4 +1,3 @@
-import React from 'react'
 import BlackLogo from '../assets/icons/Navbar/BlackLogo'
 import { Link } from 'react-router'
 
