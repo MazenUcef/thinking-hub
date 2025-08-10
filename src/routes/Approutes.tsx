@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import LandingPage from "../pages/LandingPage";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,14 +10,22 @@ import SuccessStories from "../pages/SuccessStories";
 import ForgetPassword from "../pages/forgetPassword";
 import MeetOurExpertsPage from "../pages/MeetOurExpertsPage";
 
-const Approutes = () => {
-    const excludeAuthPaths = ["/signup", "/signin", "/forgetPassword"];
-    const currentPath = location.pathname;
-
+const AppRoutes = () => {
     return (
         <BrowserRouter>
-            {!excludeAuthPaths.includes(currentPath) && currentPath === "/" && <Navbar />}
-            {currentPath !== "/" && !excludeAuthPaths.includes(currentPath) && <MainNavbar />}
+            <RouteHandler />
+        </BrowserRouter>
+    )
+}
+
+const RouteHandler = () => {
+    const excludeAuthPaths = ["/signup", "/signin", "/forgetPassword"];
+    const { pathname } = useLocation();
+
+    return (
+        <>
+            {!excludeAuthPaths.includes(pathname) && pathname === "/" && <Navbar />}
+            {pathname !== "/" && !excludeAuthPaths.includes(pathname) && <MainNavbar />}
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/signup" element={<SignUp />} />
@@ -27,9 +35,9 @@ const Approutes = () => {
                 <Route path="/forgetPassword" element={<ForgetPassword />} />
                 <Route path="/meet" element={<MeetOurExpertsPage />} />
             </Routes>
-            {!excludeAuthPaths.includes(currentPath) && <Footer />}
-        </BrowserRouter>
+            {!excludeAuthPaths.includes(pathname) && <Footer />}
+        </>
     )
 }
 
-export default Approutes
+export default AppRoutes;

@@ -5,13 +5,13 @@ import videoSrc from '../assets/videos/Navbar/video.mp4';
 
 const Navbar = () => {
     const navLinks = [
-        { label: 'Programs', to: '#' },
-        { label: 'Courses', to: '#' },
-        { label: 'Experts', to: '#' },
-        { label: 'About Us', to: '#' },
-        { label: 'FAQs', to: '#' },
-        { label: 'Contact', to: '#' },
+        { label: 'Courses', to: '/availableCourses' },
+        { label: 'Experts', to: '/meet' },
+        { label: 'About Us', to: '/' },
+        { label: 'FAQs', to: '/' },
+        { label: 'Contact', to: '/' },
     ];
+
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
@@ -48,7 +48,7 @@ const Navbar = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const handleDotClick = (index:number) => {
+    const handleDotClick = (index: number) => {
         setCurrentSlide(index);
     };
 
@@ -58,7 +58,9 @@ const Navbar = () => {
             <div className="px-[120px] z-10">
                 <nav className="flex justify-between items-center p-4 md:p-6 z-10">
                     <div className="flex items-center gap-[40px]">
-                        <GreenLogo className="mr-2" />
+                        <Link to={"/"}>
+                            <GreenLogo className="mr-2" />
+                        </Link>
                         <div className="gap-5 flex">
                             {navLinks.map((link, index) => (
                                 <Link key={index} to={link.to} className="text-[16px] font-[400] text-white transition">
@@ -68,10 +70,10 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4 md:space-x-6">
-                        <Link to={"#"} className="rounded-[8px] h-[40px] py-[10px] px-[20px] border-1 border-[#D5D7DA] text-[14px] font-[600] bg-white text-black flex justify-between items-center">
+                        <Link to={'/signin'} className="rounded-[8px] h-[40px] py-[10px] px-[20px] border-1 border-[#D5D7DA] text-[14px] font-[600] bg-white text-black flex justify-between items-center">
                             Log in
                         </Link>
-                        <Link to={"#"} className="rounded-[8px] h-[40px] py-[10px] px-[20px] bg-[#008A4A] text-[14px] font-[600] flex justify-between items-center">
+                        <Link to={'/signup'} className="rounded-[8px] h-[40px] py-[10px] px-[20px] bg-[#008A4A] text-[14px] font-[600] flex justify-between items-center">
                             Sign up
                         </Link>
                     </div>
