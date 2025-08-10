@@ -7,6 +7,7 @@ import Leadership from '../assets/images/Leadership.png'
 import AvailCoursesCard from '../components/AvailCoursesCard'
 import { useState } from 'react'
 import Filter from '../components/Filter'
+import { Pagination } from '../components/Pagination'
 
 const mockData = [
     {
@@ -143,7 +144,7 @@ const AvailableCourses = () => {
                         key={category}
                         type="button"
                         onClick={() => setActiveCategory(category)}
-                        className={`w-[121px] h-[40px] rounded-full py-[8px] cursor-pointer px-[16px] flex justify-center items-center text-[16px] font-[600] ${category === activeCategory
+                        className={`w-[121px] h-[40px] text-nowrap rounded-full py-[8px] cursor-pointer px-[16px] flex justify-center items-center text-[16px] font-[600] ${category === activeCategory
                             ? "bg-[#D3624C] text-white"
                             : "bg-[#F5F5F5] border-1 border-[#D5D7DA] text-[#181D27]"
                             }`}
@@ -159,6 +160,9 @@ const AvailableCourses = () => {
                 {mockData.map((course) => (
                     <AvailCoursesCard key={course.title} {...course} />
                 ))}
+            </div>
+            <div>
+                <Pagination />
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AvailCoursesCard from "./AvailCoursesCard";
 import Finance from '../assets/images/Finance.png'
 import Technology from '../assets/images/Technology.png'
@@ -71,38 +71,39 @@ const AvailCoursesSection = () => {
     const categories = ["All Courses", ...uniqueCategories];
 
     return (
-        <div className="p-[120px] w-full">
-            <div className="mb-[12px]">
-                <h1 className="font-[700] text-[48px]">Available Courses</h1>
-            </div>
-            <div className="flex justify-between items-center mb-[48px]">
-                <div>
-                    <h2 className="font-[400] text-[16px] text-[#414651]">Enhance your skills with our specialized courses, designed to build capacity in key areas.</h2>
+        <div className='bg-white p-[120px]'>
+            <div className="w-full">
+                <div className="mb-[12px]">
+                    <h1 className="font-[700] text-[48px]">Available Courses</h1>
                 </div>
-                <div>
-                    <button className="w-[168px] h-[48px] rounded-[8px] py-[12px] px-[16px] flex justify-center text-[16px] font-[600] text-white items-center bg-[#008346]">View All Courses</button>
+                <div className="flex justify-between items-center mb-[48px]">
+                    <div>
+                        <h2 className="font-[400] text-[16px] text-[#414651]">Enhance your skills with our specialized courses, designed to build capacity in key areas.</h2>
+                    </div>
+                    <div>
+                        <button className="w-[168px] h-[48px] rounded-[8px] py-[12px] px-[16px] flex justify-center text-[16px] font-[600] text-white items-center bg-[#008346]">View All Courses</button>
+                    </div>
                 </div>
-            </div>
-            <div className="flex gap-[16px] items-center mb-[48px]">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        type="button"
-                        onClick={() => setActiveCategory(category)}
-                        className={`w-[121px] h-[40px] rounded-full py-[8px] cursor-pointer px-[16px] flex justify-center items-center text-[16px] font-[600] ${
-                            category === activeCategory 
-                                ? "bg-[#D3624C] text-white" 
-                                : "bg-[#F5F5F5] border-1 border-[#D5D7DA] text-[#181D27]"
-                        }`}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[56px] w-full">
-                {mockData.map((course) => (
-                    <AvailCoursesCard key={course.title} {...course} />
-                ))}
+                <div className="flex gap-[16px] items-center mb-[48px]">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            type="button"
+                            onClick={() => setActiveCategory(category)}
+                            className={`w-[121px] h-[40px] rounded-full py-[8px] text-nowrap cursor-pointer px-[16px] flex justify-center items-center text-[16px] font-[600] ${category === activeCategory
+                                    ? "bg-[#D3624C] text-white"
+                                    : "bg-[#F5F5F5] border-1 border-[#D5D7DA] text-[#181D27]"
+                                }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[56px] w-full">
+                    {mockData.map((course) => (
+                        <AvailCoursesCard key={course.title} {...course} />
+                    ))}
+                </div>
             </div>
         </div>
     );

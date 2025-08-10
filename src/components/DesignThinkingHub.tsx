@@ -13,8 +13,8 @@ import Image93 from "../assets/images/image 93.png";
 
 const DesignThinkingHub: React.FC = () => {
   return (
-    <section className="bg-white min-h-screen px-4 py-12 md:px-8 lg:px-16 grid place-items-center">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+    <section className="bg-white min-h-screen px-[120px] grid place-items-center">
+      <div className="w-full mx-auto grid lg:grid-cols-2 gap-6">
         {/* Left Content */}
         <div>
           <div>

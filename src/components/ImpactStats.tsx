@@ -3,8 +3,8 @@ import Image from "../assets/images/impact-stats.png";
 
 const ImpactStats: React.FC = () => {
   return (
-    <section className="bg-[#F5F5F5] min-h-screen px-4 py-12 md:px-8 lg:px-16 grid place-items-center">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
+    <section className="bg-[#F5F5F5] min-h-screen py-12 px-[180px] grid place-items-center">
+      <div className="w-full mx-auto grid lg:grid-cols-2 gap-8">
         {/* Left Content */}
         <div>
           <h2 className="text-5xl max-md:text-4xl font-bold text-[#181D27] mb-3">

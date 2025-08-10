@@ -3,7 +3,7 @@
 
 
 :root {
-  --background: #f2f3fa;
+  --background: white;
   --foreground: #171717;
   --font-inter: "Inter", sans-serif;
 }
@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f2f3fa;
+    --background: white
     --foreground: #171717;
     --font-inter: "Inter", sans-serif;
   }

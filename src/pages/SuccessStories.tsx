@@ -1,6 +1,7 @@
 import hyperTwo from '../assets/images/hyperTwo.jpg'
 import videoOne from '../assets/images/videoOne.png'
 import Filter from '../components/Filter';
+import { Pagination } from '../components/Pagination';
 import SuccessStoriesCard from '../components/SuccessStoriesCard';
 
 
@@ -77,6 +78,9 @@ const SuccessStories = () => {
                 {mockData.map((story) => (
                     <SuccessStoriesCard key={story.title} {...story} />
                 ))}
+            </div>
+            <div>
+                <Pagination />
             </div>
         </div>
     );

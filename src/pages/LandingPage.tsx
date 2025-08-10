@@ -1,12 +1,21 @@
-import React from 'react'
 import AvailCoursesSection from '../components/AvailCoursesSection'
 import SuccessStoriesSection from '../components/SuccessStoriesSection'
+import MeetOurExpertsSection from '../components/MeetExpertsSection'
+import DesignThinkingHub from '../components/DesignThinkingHub'
+import ProgramTracks from '../components/ProgramTracks'
+import ImpactStats from '../components/ImpactStats'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 const LandingPage = () => {
     return (
-        <div>
+        <div className='bg-white'>
+            <DesignThinkingHub />
+            <ProgramTracks />
             <AvailCoursesSection />
-            <SuccessStoriesSection/>
+            <MeetOurExpertsSection />
+            <SuccessStoriesSection />
+            <ImpactStats />
+            <NewsletterSignup />
         </div>
     )
 }

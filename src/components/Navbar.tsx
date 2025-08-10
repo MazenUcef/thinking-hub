@@ -68,12 +68,12 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4 md:space-x-6">
-                        <button className="rounded-[8px] h-[40px] py-[10px] px-[20px] border-1 border-[#D5D7DA] text-[14px] font-[600] bg-white text-black flex justify-between items-center">
+                        <Link to={"#"} className="rounded-[8px] h-[40px] py-[10px] px-[20px] border-1 border-[#D5D7DA] text-[14px] font-[600] bg-white text-black flex justify-between items-center">
                             Log in
-                        </button>
-                        <button className="rounded-[8px] h-[40px] py-[10px] px-[20px] bg-[#008A4A] text-[14px] font-[600] flex justify-between items-center">
+                        </Link>
+                        <Link to={"#"} className="rounded-[8px] h-[40px] py-[10px] px-[20px] bg-[#008A4A] text-[14px] font-[600] flex justify-between items-center">
                             Sign up
-                        </button>
+                        </Link>
                     </div>
                 </nav>
 
