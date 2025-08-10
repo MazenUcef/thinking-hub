@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Approutes from './routes/Approutes'
 
@@ -7,6 +8,3 @@ const App = () => {
             <Approutes />
         </div>
     )
-}
-
-export default App
